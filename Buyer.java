@@ -10,7 +10,7 @@ public class Buyer extends User
        email=bemailaddress;
        mycart=bcart;       
     }
-    public void placeOrder(Item antik, int howmany)
+    public void placeOrder(Artwork antik, int howmany)
     {
       mycart.addItemOrdered(antik, howmany);
     }
