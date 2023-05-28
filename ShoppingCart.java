@@ -4,7 +4,7 @@ import java.util.*;
 public class ShoppingCart               //extends Buyer??????????
 {   
     
-    private static ArrayList<ItemOrdered> OrderList = new ArrayList<ItemOrdered>();
+    private static ArrayList<ArtworkOrdered> OrderList = new ArrayList<ArtworkOrdered>();
     private static int i, posa;
     private static double total;
     private static boolean orderFinished;
@@ -15,7 +15,7 @@ public class ShoppingCart               //extends Buyer??????????
         //ShoppingCart.total=sinolo;
         orderFinished=false;
     }  
-    public void addItemOrdered(Item ant, int posa)
+    public void addArtworkOrdered(Artwork ant, int posa)
     {
       int akyro;
       try
@@ -31,7 +31,7 @@ public class ShoppingCart               //extends Buyer??????????
               }
                   OrderList.get(i).setQuantity(OrderList.get(i).getQuantity()+posa);
           }else{
-              ItemOrdered itemObj = new ItemOrdered(ant, posa);
+              ArtworkOrdered itemObj = new ArtworkOrdered(ant, posa);
               OrderList.add(itemObj);
           }
         
@@ -46,15 +46,15 @@ public class ShoppingCart               //extends Buyer??????????
       //OrderList.get(OrderList.indexOf(ant)).setQuantity(itemObj.getQuantity()+posa);
     
     }
-    public void updateItemStock(int stokk, Item itemaki)
+    public void updateArtworkStock(int stokk, Artwork itemaki)
     {
         itemaki.setStock(itemaki.getStock()+stokk);
     }
     public void showCart()
     {
-        System.out.println("Item\tQuantity\tPrice\tTotal\tCourier Cost");
+        System.out.println("Artwork\tQuantity\tPrice\tTotal\tCourier Cost");
         for(i=0; i<OrderList.size(); i++){
-           System.out.println(i+1 +". " +OrderList.get(i).getItem().getName()+"\t"+OrderList.get(i).getQuantity()+"\t\t"+OrderList.get(i).getItem().getPrice()+"\t"+calculateNet()+"\t"+calculateCourierCost());
+           System.out.println(i+1 +". " +OrderList.get(i).getArtwork().getName()+"\t"+OrderList.get(i).getQuantity()+"\t\t"+OrderList.get(i).getArtwork().getPrice());
         }
     }
     public void checkout()
@@ -69,7 +69,7 @@ public class ShoppingCart               //extends Buyer??????????
             OrderList.clear();
         }else Menu.nonstock=true;
     }
-    public ArrayList<ItemOrdered> getOrderList()
+    public ArrayList<ArtworkOrdered> getOrderList()
     {
         return OrderList;
     }
