@@ -2,6 +2,7 @@ abstract class User
 { 
    protected  String name;
    protected  String email;
+   protected String password;
    
    public String getUName()
     {
@@ -9,4 +10,5 @@ abstract class User
     }
     
    public abstract String getUemail();
+   public abstract String getUpassword();
 }
