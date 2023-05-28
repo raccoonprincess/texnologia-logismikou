@@ -1,5 +1,5 @@
 import java.util.*;
-abstract class Item
+abstract class Artwork
 {
    protected String name;
    protected double price;
@@ -10,7 +10,7 @@ abstract class Item
    public static ArrayList<Integer> numofitems = new ArrayList<Integer>();
    
 
-   public String getBasicInfo(){
+   public String getInfo(){
        return ("info of the item:\nname:"+name+"\nprice: "+ price +"euros\ndescriptiion: "
        +description+"\nstock: "+stock+"\nid: "+id);
    }
@@ -18,7 +18,7 @@ abstract class Item
    abstract String getDetails();
    
    public String toString(){
-       System.out.println(getBasicInfo());
+       System.out.println(getInfo());
        System.out.println(getDetails());
        return "0";
     }
