@@ -1,11 +1,12 @@
-public class Owner extends User 
+public class ValidityControler extends User 
 {
     private  boolean isAdmin = true;
     
-    public Owner(String onoma, String emailaddress)
+    public ValidityControler(String onoma, String emailaddress, String password)
     {
         name=onoma;
         email=emailaddress;
+        password=passwrd;
     }
 
     public String getUemail()
