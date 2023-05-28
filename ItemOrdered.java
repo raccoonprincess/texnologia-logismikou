@@ -1,18 +1,14 @@
-public class ItemOrdered
+public class ArtworkOrdered
 {
-    private Item item;
+    private Artwork artwork;
     private int quantity;
     
-    public ItemOrdered(Item ite,int quan)
+    public ArtworkOrdered(Artwork artwrk,int quan)
     {
-      item=ite;
+      artwork=artwrk;
       quantity=quan;
     }
 
-    //public String ItemOrdered()
-    //{
-    //    return ("You have " + item + "in your cart " + "quantity: " + quantity);
-    //}
     public int getQuantity()
     {
         return quantity;
@@ -22,8 +18,8 @@ public class ItemOrdered
     {
         this.quantity+=a;
     }
-    public Item getItem()
+    public Artwork getArtwork()
     {
-        return item;
+        return artwork;
     }
 }
